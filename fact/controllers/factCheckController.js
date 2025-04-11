@@ -1,0 +1,41 @@
+const FactCheckService = require("../services/factCheckService");
+const winston = require("../utils/logger");
+
+exports.checkFact = async (req, res, next) => {
+  try {
+    const { text, url } = req.body;
+    const ipAddress = req.ip;
+
+    let inputType, content;
+
+    if (text) {
+      inputType = "text";
+      content = text;
+    } else if (url) {
+      inputType = "url";
+      content = url;
+    } else {
+      return res.status(400).json({ error: "Either text or URL is required" });
+    }
+
+    const factCheck = await FactCheckService.createFactCheck(
+      inputType,
+      content,
+      ipAddress
+    );
+    res.json(factCheck);
+  } catch (error) {
+    winston.error("Error in checkFact:", error);
+    next(error);
+  }
+};
+
+exports.getRecentChecks = async (req, res, next) => {
+  try {
+    const recentChecks = await FactCheckService.getRecentFactChecks();
+    res.json(recentChecks);
+  } catch (error) {
+    winston.error("Error in getRecentChecks:", error);
+    next(error);
+  }
+};
