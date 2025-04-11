@@ -1,6 +1,10 @@
 require("dotenv").config();
+process.on("unhandledRejection", (err) => {
+  console.error("unhandled Rejection! Shutting down...", err);
+  process.exit(1);
+});
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -15,17 +19,22 @@ app.use(morgan("combined", { stream: winston.stream }));
 app.use(express.json());
 app.use(express({ extended: true }));
 
-//db should connect here
-require("./config/db");
-
-//routes should go here
 app.use("/api", require("./routes/api"));
 
-//handle error middleware here
 app.use(require("./middlewares/errorHandler"));
 
-const PORT = process.env.PORT || 5000;
+const startServer = async () => {
+  try {
+    await require("./config/db")();
+    const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port $(PORT)`);
-});
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error("Failed to start server: 😞, err");
+    process.exit(1);
+  }
+};
+
+startServer();

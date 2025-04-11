@@ -1,0 +1,9 @@
+2025-04-11T23:02:29.872Z [[32minfo[39m]: Connected to MongoDB... 🎉: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-11T23:05:49.840Z [[31merror[39m]: Error in checkFact: FactCheck is not a constructor
+2025-04-11T23:05:49.841Z [[31merror[39m]: undefined FactCheck is not a constructor
+2025-04-11T23:05:49.845Z [[32minfo[39m]: ::1 - - [11/Apr/2025:23:05:49 +0000] "POST /api/check HTTP/1.1" 500 56 "-" "PostmanRuntime/7.43.3"
+2025-04-11T23:18:19.325Z [[32minfo[39m]: Connected to MongoDB... 🎉: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-11T23:18:29.327Z [[31merror[39m]: Google Fact Check API error: Request failed with status code 403
+2025-04-11T23:18:29.336Z [[31merror[39m]: Error in checkFact: FactCheck validation failed: results: Cast to string failed for value "[]" (type Array) at path "results"
+2025-04-11T23:18:29.336Z [[31merror[39m]: undefined FactCheck validation failed: results: Cast to string failed for value "[]" (type Array) at path "results"
+2025-04-11T23:18:29.342Z [[32minfo[39m]: ::1 - - [11/Apr/2025:23:18:29 +0000] "POST /api/check HTTP/1.1" 500 56 "-" "PostmanRuntime/7.43.3"

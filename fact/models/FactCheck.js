@@ -13,7 +13,7 @@ const factCheckSchema = new mongoose.Schema({
   },
 
   results: {
-    type: String,
+    type: [],
     default: [],
   },
 
@@ -26,3 +26,5 @@ const factCheckSchema = new mongoose.Schema({
     type: String,
   },
 });
+
+module.exports = mongoose.model("FactCheck", factCheckSchema);
