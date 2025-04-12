@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Configuration
-const HF_API_KEY = process.env.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;
+const HF_API_KEY = process.env.HUGGINGFACE_API_KEY;
 const PORT = process.env.TRANSLATION_SERVER_PORT || 3001;
 
 // Define language-specific models
