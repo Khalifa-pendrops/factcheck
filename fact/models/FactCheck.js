@@ -12,10 +12,43 @@ const factCheckSchema = new mongoose.Schema({
     required: true,
   },
 
-  results: {
-    type: [],
-    default: [],
-  },
+  results: [
+    {
+      claim: String,
+      claimDate: Date,
+      claimant: String,
+      verdict: {
+        type: String,
+        enum: [
+          "True",
+          "Mostly True",
+          "Mixture",
+          "Mostly False",
+          "False",
+          "Misleading",
+          "Unverified",
+          "Unverifiable",
+          "Outdated",
+          "Satire",
+        ],
+        required: true,
+      },
+      confidence: {
+        type: Number,
+        min: 0,
+        max: 100,
+        default: 80,
+      },
+      sources: [
+        {
+          publisher: String,
+          url: String,
+          reviewDate: Date,
+        },
+      ],
+      explanation: String,
+    },
+  ],
 
   createdAt: {
     type: Date,
