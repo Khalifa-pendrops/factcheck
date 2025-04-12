@@ -7,7 +7,7 @@ exports.checkFact = async (req, res, next) => {
     const { text, url, language } = req.body;
     const ipAddress = req.ip;
 
-    let inputType, content;
+    let inputType, content; 
 
     if (text) {
       inputType = "text";
