@@ -1,5 +1,6 @@
 const FactCheck = require("../models/FactCheck");
-const GoogleApiService = require("./googleApiService");
+// const GoogleApiService = require("./googleApiService");
+const VerdictAnalysisService = require("../services/verdictAnalysisService");
 
 class FactCheckService {
   static async createFactCheck(inputType, content, ipAddress) {
@@ -9,12 +10,18 @@ class FactCheckService {
       ipAddress,
     });
 
-    
     try {
-      const results = await GoogleApiService.searchClaims(content);
-      factCheck.results = results.claims || [];
+      factCheck.results = await VerdictAnalysisService.analyzeClaim(content);
     } catch (error) {
-      factCheck.results = [];
+      factCheck.results = [
+        // watch here!
+        {
+          claim: content,
+          verdict: "Unverifiable",
+          confidence: 0,
+          explanation: "Error during fact-checking analysis.",
+        },
+      ];
     }
 
     await factCheck.save();
