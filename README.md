@@ -227,3 +227,12 @@ Push to the branch (git push origin feature/amazing-feature)
 Open a Pull Request
 
 Please ensure your code follows the style guidelines and includes appropriate tests.
+
+---
+
+## Acknowledgements
+
+- Google Fact Check Tools API
+- Hugging Face for open-source NLP models
+- Masakhane project for African language NLP resources
+- Tesseract.js for OCR capabilities
