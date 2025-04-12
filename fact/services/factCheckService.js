@@ -1,9 +1,10 @@
 const FactCheck = require("../models/FactCheck");
 const VerdictAnalysisService = require("./verdictAnalysisService");
+const OfflineCheckService = require("./offlineCheckService");
 const logger = require("../utils/logger");
 
 class FactCheckService {
-  static async createFactCheck(inputType, content, ipAddress, language = "en") {
+  static async createFactCheck(inputType, content, ipAddress) {
     const factCheck = new FactCheck({
       inputType,
       content,
@@ -12,41 +13,51 @@ class FactCheckService {
     });
 
     try {
-      const analysis = await VerdictAnalysisService.analyzeClaim(
-        content,
-        language
-      );
+      // First try online Google + Internal check
+      const analysis = await VerdictAnalysisService.analyzeClaim(content);
       factCheck.results = analysis;
 
-      logger.info(`Fact-checked: ${content}`, {
+      logger.info(`✅ Online fact-check success: ${content}`, {
         verdict: analysis[0]?.verdict,
         confidence: analysis[0]?.confidence,
       });
     } catch (error) {
-      logger.error("Fact-check failed:", {
+      logger.warn("⚠️ Online check failed, falling back to offline:", {
         error: error.message,
         content,
-        stack: error.stack,
       });
 
-      factCheck.results = [
-        {
+      // Use OfflineCheckService as fallback if no internet access
+      const offlineMatches = OfflineCheckService.searchClaims(content);
+      if (offlineMatches.length > 0) {
+        factCheck.results = offlineMatches.map((match) => ({
           claim: content,
-          verdict: "Unverifiable",
-          confidence: 0,
-          explanation: `Error during fact-checking: ${error.message}`,
-        },
-      ];
+          verdict: match.verdict || "Likely",
+          confidence: match.confidence || 0.7,
+          explanation:
+            match.explanation || `Matched with local claim: "${match.text}"`,
+          sources: match.sources || [],
+        }));
+      } else {
+        factCheck.results = [
+          {
+            claim: content,
+            verdict: "Unverifiable",
+            confidence: 0,
+            explanation: "No relevant offline match found.",
+            sources: [],
+          },
+        ];
+      }
     }
 
     await factCheck.save();
     return factCheck;
   }
 
-  static async getRecentFactChecks() {
-    return await FactCheck.find().sort({ createdAt: -1 }).limit(10);
+  static async getRecentFactChecks(limit = 10) {
+    return FactCheck.find().sort({ createdAt: -1 }).limit(limit);
   }
 }
 
 module.exports = FactCheckService;
-

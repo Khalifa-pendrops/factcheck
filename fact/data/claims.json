@@ -1,0 +1,54 @@
+[
+  {
+    "text": "COVID-19 vaccines contain microchips",
+    "verdict": "False",
+    "explanation": "No credible evidence supports this claim",
+    "sources": ["WHO", "CDC"],
+    "keywords": ["vaccine", "microchip", "covid"]
+  },
+
+  {
+    "text": "5G networks spread coronavirus",
+    "verdict": "False",
+    "explanation": "Viruses cannot travel via radio waves",
+    "sources": ["FCC", "IEEE"],
+    "keywords": ["5g", "coronavirus", "spread"]
+  },
+
+  {
+    "text": "Bola Tinubu owns Lagos Island",
+    "verdict": "Mostly False",
+    "explanation": "While Tinubu has significant real estate holdings, legal records show he doesn't own the entire island.",
+    "sources": ["Premium Times NG", "TheCable"],
+    "keywords": ["tinubu", "lagos", "ownership"],
+    "region": "NG",
+    "category": "politics"
+  },
+
+  {
+    "text": "Drinking salt water cures Ebola",
+    "verdict": "False",
+    "explanation": "WHO confirms this dangerous myth has no scientific basis and can cause dehydration.",
+    "sources": ["NCDC", "WHO Africa"],
+    "keywords": ["ebola", "salt water", "cure"],
+    "region": "NG",
+    "category": "health"
+  },
+
+  {
+    "text": "Bandits receive payments from government",
+    "verdict": "Unverified",
+    "explanation": "No concrete evidence despite widespread rumors. Security experts deny knowledge.",
+    "sources": ["Daily Trust", "SSS reports"],
+    "keywords": ["bandits", "ransom", "government"],
+    "region": "NG",
+    "category": "security"
+  },
+  {
+    "text": "INEC servers were hacked in 2023",
+    "verdict": "Unverifiable",
+    "confidence": 0.4,
+    "explanation": "No public technical audit was provided to prove this.",
+    "sources": ["https://factcheckhub.com"]
+  }
+]

@@ -6,3 +6,5 @@
 2025-04-12T05:23:06.938Z [[31merror[39m]: Could not connect to MongoDB... ⛔ Server selection timed out after 5000 ms
 2025-04-12T05:43:15.320Z [[31merror[39m]: Could not connect to MongoDB... Cannot read properties of undefined (reading 'connection')
 2025-04-12T10:22:01.482Z [[31merror[39m]: Fact-checking failed:
+2025-04-12T10:50:02.112Z [[31merror[39m]: Google API Failed:
+2025-04-12T10:50:02.113Z [[31merror[39m]: Fact-check failed:

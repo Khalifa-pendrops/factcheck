@@ -81,3 +81,51 @@
 2025-04-12T10:46:17.884Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T10:46:26.849Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T10:46:32.279Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:46:41.339Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:50:02.112Z [[31merror[39m]: Google API Failed:
+2025-04-12T10:50:02.113Z [[31merror[39m]: Fact-check failed:
+2025-04-12T10:50:02.296Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:50:02 +0000] "POST /api/check HTTP/1.1" 200 426 "-" "PostmanRuntime/7.43.3"
+2025-04-12T10:53:50.541Z [[32minfo[39m]: Fact-checked: COVID-19 vaccines contain microchips
+2025-04-12T10:53:51.519Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:53:51 +0000] "POST /api/check HTTP/1.1" 200 644 "-" "PostmanRuntime/7.43.3"
+2025-04-12T11:03:00.170Z [[32minfo[39m]: Fact-checked: https://example.com/fake-article
+2025-04-12T11:03:00.331Z [[32minfo[39m]: ::1 - - [12/Apr/2025:11:03:00 +0000] "POST /api/check HTTP/1.1" 200 364 "-" "PostmanRuntime/7.43.3"
+2025-04-12T11:06:29.535Z [[32minfo[39m]: ::1 - - [12/Apr/2025:11:06:29 +0000] "GET /api/recent HTTP/1.1" 200 4389 "-" "PostmanRuntime/7.43.3"
+2025-04-12T12:10:02.623Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:10:06.846Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:10:12.655Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:11:47.132Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:12:02.123Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:12:13.358Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:12:23.670Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:12:34.097Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:12:37.314Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:14:21.455Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:15:32.217Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:19:31.824Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:19:36.799Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:25:20.871Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:25:33.677Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:28:09.334Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:28:57.156Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:29:51.098Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:29:59.035Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T12:33:26.306Z [[32minfo[39m]: Fact-checked: COVID vaccines cause autism
+2025-04-12T12:33:26.545Z [[32minfo[39m]: ::1 - - [12/Apr/2025:12:33:26 +0000] "POST /api/check HTTP/1.1" 200 674 "-" "PostmanRuntime/7.43.3"
+2025-04-12T12:43:00.562Z [[32minfo[39m]: Fact-checked: Nigeria to adopt cryptocurrency as national currency in june
+2025-04-12T12:43:00.756Z [[32minfo[39m]: ::1 - - [12/Apr/2025:12:43:00 +0000] "POST /api/check HTTP/1.1" 200 421 "-" "PostmanRuntime/7.43.3"
+2025-04-12T12:58:03.818Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:00:20.511Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:00:57.372Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:01:22.195Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:01:30.156Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:23:47.976Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:31:11.905Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:32:42.491Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:32:51.986Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:33:54.923Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:34:10.193Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:34:29.314Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:35:37.867Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:36:35.786Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:36:51.327Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T13:44:08.958Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
