@@ -13,7 +13,12 @@ const winston = require("./utils/logger");
 const app = express();
 
 //middlewares should go here
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:8080", "https://truthcheck.netlify.app/"],
+    credentials: true,
+  })
+);
 app.use(helmet());
 app.use(morgan("combined", { stream: winston.stream }));
 app.use(express.json());
