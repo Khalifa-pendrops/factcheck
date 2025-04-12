@@ -1,12 +1,13 @@
 const FactCheckService = require("../services/factCheckService");
+const OfflineCheckService = require("../services/offlineCheckService");
 const winston = require("../utils/logger");
 
 exports.checkFact = async (req, res, next) => {
   try {
-    const { text, url } = req.body;
+    const { text, url, language } = req.body;
     const ipAddress = req.ip;
 
-    let inputType, content;
+    let inputType, content; 
 
     if (text) {
       inputType = "text";
@@ -21,11 +22,43 @@ exports.checkFact = async (req, res, next) => {
     const factCheck = await FactCheckService.createFactCheck(
       inputType,
       content,
-      ipAddress
+      ipAddress,
+      language || "en" // fallback to English if other languages are not supported
     );
+
     res.json(factCheck);
   } catch (error) {
     winston.error("Error in checkFact:", error);
+    next(error);
+  }
+};
+
+exports.checkOfflineFact = async (req, res, next) => {
+  try {
+    const { text } = req.body;
+    if (!text) {
+      return res
+        .status(400)
+        .json({ error: "Text is required for offline check" });
+    }
+
+    const matches = OfflineCheckService.searchClaims(text);
+
+    if (matches.length === 0) {
+      return res.status(404).json({
+        message:
+          "No offline match found. Try online or update your local dataset.",
+        results: [],
+      });
+    }
+
+    return res.json({
+      inputType: "text",
+      content: text,
+      source: "offline",
+      results: matches,
+    });
+  } catch (error) {
     next(error);
   }
 };
