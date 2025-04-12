@@ -7,3 +7,8 @@
 2025-04-11T23:18:29.336Z [[31merror[39m]: Error in checkFact: FactCheck validation failed: results: Cast to string failed for value "[]" (type Array) at path "results"
 2025-04-11T23:18:29.336Z [[31merror[39m]: undefined FactCheck validation failed: results: Cast to string failed for value "[]" (type Array) at path "results"
 2025-04-11T23:18:29.342Z [[32minfo[39m]: ::1 - - [11/Apr/2025:23:18:29 +0000] "POST /api/check HTTP/1.1" 500 56 "-" "PostmanRuntime/7.43.3"
+2025-04-11T23:24:16.826Z [[32minfo[39m]: Connected to MongoDB... 🎉: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-11T23:24:23.073Z [[32minfo[39m]: ::1 - - [11/Apr/2025:23:24:23 +0000] "POST /api/check HTTP/1.1" 200 5402 "-" "PostmanRuntime/7.43.3"
+2025-04-12T05:23:06.938Z [[31merror[39m]: Could not connect to MongoDB... ⛔ Server selection timed out after 5000 ms
+2025-04-12T05:28:44.128Z [[32minfo[39m]: Connected to MongoDB... 🎉: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T05:43:15.320Z [[31merror[39m]: Could not connect to MongoDB... Cannot read properties of undefined (reading 'connection')

@@ -23,11 +23,11 @@ app.use("/api", require("./routes/api"));
 
 app.use(require("./middlewares/errorHandler"));
 
+const PORT = process.env.PORT || 5000;
+
 const startServer = async () => {
   try {
     await require("./config/db")();
-    const PORT = process.env.PORT || 5000;
-
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
