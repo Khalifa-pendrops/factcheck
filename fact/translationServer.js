@@ -38,7 +38,7 @@ app.post('/translate', async (req, res) => {
     const result = await pipeline('translation', LANGUAGE_MODELS[targetLanguage], {
       inputs: text,
       options: { use_cache: true },
-      apiKey: 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
+      apiKey: HF_API_KEY
     });
     
     res.json({ 
