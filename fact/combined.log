@@ -46,3 +46,38 @@
 2025-04-12T09:05:14.850Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T09:05:29.854Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T09:11:59.147Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:13:55.913Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:54:19.465Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:54:28.218Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:54:40.132Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:55:00.518Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T09:55:04.832Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:03:08.930Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:11:46.143Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:19:23.945Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:19:43.593Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:19:49.847Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:20:11.610Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:20:33.883Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:20:43.773Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:20:50.619Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:22:01.482Z [[31merror[39m]: Fact-checking failed:
+2025-04-12T10:22:01.670Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:22:01 +0000] "POST /api/check HTTP/1.1" 200 396 "-" "PostmanRuntime/7.43.3"
+2025-04-12T10:28:47.987Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:29:37.286Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:33:08.888Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:39:45.923Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:40:08.962Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:41:12.617Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:42:06.443Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:42:36.749Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:43:35.297Z [[32minfo[39m]: Fact-checked: COVID-19 vaccines contain microchips
+2025-04-12T10:43:35.477Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:43:35 +0000] "POST /api/check HTTP/1.1" 200 644 "-" "PostmanRuntime/7.43.3"
+2025-04-12T10:45:16.292Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:45:35.267Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:45:42.545Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:45:45.576Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:46:03.529Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:46:17.884Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:46:26.849Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:46:32.279Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net

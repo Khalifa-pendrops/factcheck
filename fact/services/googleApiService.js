@@ -1,39 +1,41 @@
 const axios = require("axios");
-const config = require("../config/config");
+const dotenv = require("dotenv");
+const logger = require("../utils/logger");
+
+dotenv.config();
 
 class GoogleApiService {
-  static async searchClaims(query, language = "en") {
+  static async searchClaims(query, languageCode = "en") {
     try {
-      const response = await axios.get(config.googleFactCheckApiUrl, {
-        params: {
-          query,
-          languageCode: language,
-          key: config.googleFactCheckApiKey,
-          pageSize: 5,
-        },
-        timeout: 5000,
+      const response = await axios.get(
+        "https://factchecktools.googleapis.com/v1alpha1/claims:search",
+        {
+          params: {
+            query,
+            languageCode,
+            key: process.env.GOOGLE_FACT_CHECK_API_KEY,
+            pageSize: 3,
+          },
+          timeout: 10000,
+        }
+      );
+
+      logger.debug("Google API Response:", {
+        status: response.status,
+        data: response.data,
       });
 
-      return this._filterValidClaims(response.data);
+      return response.data;
     } catch (error) {
-      console.error("Google API Error:", error.response?.data || error.message);
-      return { claims: [] };
+      logger.error("Google API Failed:", {
+        error: error.response?.data || error.message,
+        query,
+        languageCode,
+      });
+
+      throw new Error(error.response?.data?.error?.message || error.message);
     }
   }
-
-  static _filterValidClaims(data) {
-    if (!data || !Array.isArray(data.claims)) return { claims: [] };
-
-    return {
-      claims: data.claims
-        .filter((claim) => {
-          return (
-            claim?.text &&
-            claim.claimReview?.[0]?.textualRating &&
-            claim.claimReview[0].url
-          );
-        })
-        .slice(0, 5), 
-    };
-  }
 }
+
+module.exports = GoogleApiService;
