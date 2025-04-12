@@ -5,7 +5,7 @@ const logger = require("../utils/logger");
 dotenv.config();
 
 class GoogleApiService {
-  static async searchClaims(query, languageCode = "en") {
+  static async searchClaims(query, languageCode = "en") { 
     try {
       const response = await axios.get(
         "https://factchecktools.googleapis.com/v1alpha1/claims:search",
