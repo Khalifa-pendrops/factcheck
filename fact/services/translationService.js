@@ -7,12 +7,7 @@ class TranslationService {
     this.baseUrl = config.translationServerUrl || 'http://localhost:3001';
   }
 
-  /**
-   * Translate text to the specified language
-   * @param {string} text - Text to translate
-   * @param {string} targetLanguage - Language code to translate to (ig, yo, ha)
-   * @returns {Promise<string>} - Translated text
-   */
+
   async translateText(text, targetLanguage) {
     try {
       const response = await axios.post(`${this.baseUrl}/translate`, {
@@ -27,16 +22,11 @@ class TranslationService {
     }
   }
 
-  /**
-   * Translate an entire fact check response object
-   * @param {Object} factCheckResult - Fact check result object
-   * @param {string} targetLanguage - Language code to translate to
-   * @returns {Promise<Object>} - Translated fact check result
-   */
+
   async translateFactCheckResult(factCheckResult, targetLanguage) {
     try {
       if (targetLanguage === 'en') {
-        return factCheckResult; // No translation needed for English
+        return factCheckResult; 
       }
       
       // First translate the original content
@@ -82,7 +72,7 @@ class TranslationService {
         content: translatedContent,
         results: translatedResults,
         translatedTo: targetLanguage,
-        _original: { content: factCheckResult.content } // Keep original for reference
+        _original: { content: factCheckResult.content } 
       };
     } catch (error) {
       winston.error(`Failed to translate fact check result: ${error.message}`, error);
@@ -91,10 +81,7 @@ class TranslationService {
     }
   }
 
-  /**
-   * Get list of supported languages
-   * @returns {Promise<Array>} Array of language objects with code and name
-   */
+  //Get list of supported languages
   async getSupportedLanguages() {
     try {
       const response = await axios.get(`${this.baseUrl}/languages`);

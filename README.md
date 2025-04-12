@@ -8,23 +8,27 @@ A fact-checking platform for verifying news authenticity in Nigeria
 
 - Features
 
-- Technology Stack
+- System Architecture
 
-- API Documentation
+- Prerequisites
 
 - Installation
 
-- Configuration
+- Usage
 
-- Running the Application
+- API Endpoints
 
-- Testing
+- Development
 
-- Deployment
+- API Documentation
 
 - Project Structure
 
+- Known Issues
+
 - Contributing
+
+- Acknowledgments
 
 ---
 
@@ -84,7 +88,7 @@ The application consists of two main components:
 
 - Clone the repository
 
-git clone `https://github.com/yourusername/factcheck.git`
+git clone `https://github.com/Khalifa-pendrops/factcheck.git`
 
 cd factcheck
 
@@ -94,7 +98,7 @@ npm install
 
 - Create a .env file in the root directory
 
-PORT=5000
+PORT=8080
 MONGODB_URI=mongodb+srv://your_connection_string
 GOOGLE_FACT_CHECK_API_KEY=your_google_api_key
 HUGGINGFACE_API_KEY=your_huggingface_api_key
@@ -133,7 +137,7 @@ GET /api/recent - Get recent fact checks
 
 ---
 
-## Translation
+### Translation
 
 GET /api/languages - Get supported languages
 GET /api/translate/:factCheckId/:targetLanguage - Translate a fact check result
@@ -147,12 +151,12 @@ Body: { "text": "Hello world", "targetLanguage": "ha" }
 Example Usage
 
 - Check a fact
-curl.exe -X POST `http://localhost:5000/api/check \`
+curl.exe -X POST `http://localhost:8080/api/check \`
   -H "Content-Type: application/json" \
   -d '{"text": "The earth is flat"}'
 
 - Translate a fact check to Yoruba
-curl.exe -X GET `http://localhost:5000/api/translate/6123456789abcdef12345678/yo`
+curl.exe -X GET `http://localhost:8080/api/translate/6123456789abcdef12345678/yo`
 
 ---
 
@@ -180,7 +184,7 @@ Test coverage includes:
 
 Comprehensive API documentation is available via Swagger UI when the application is running:
 
-`(http://localhost:5000/api-docs)`
+`(http://localhost:8080/api-docs)`
 
 The documentation includes:
 
@@ -217,11 +221,12 @@ Translation models for Nigerian languages are still evolving and may not be perf
 Image text extraction works best with clear, high-resolution images
 Google Fact Check API may not cover all topics or claims
 
-Contributing
+## Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 Fork the repository
-Create your feature branch (git checkout -b feature/amazing-feature)
+Create your feature branch (git checkout -b feature/your-feature)
 Commit your changes (git commit -m 'Add some amazing feature')
 Push to the branch (git push origin feature/amazing-feature)
 Open a Pull Request
