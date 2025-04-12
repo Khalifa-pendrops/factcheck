@@ -3,7 +3,7 @@ const winston = require("../utils/logger");
 
 exports.checkFact = async (req, res, next) => {
   try {
-    const { text, url } = req.body;
+    const { text, url, language } = req.body;
     const ipAddress = req.ip;
 
     let inputType, content;
@@ -21,8 +21,10 @@ exports.checkFact = async (req, res, next) => {
     const factCheck = await FactCheckService.createFactCheck(
       inputType,
       content,
-      ipAddress
+      ipAddress,
+      language || "en" // fallback to English if other languages are not supported
     );
+
     res.json(factCheck);
   } catch (error) {
     winston.error("Error in checkFact:", error);
