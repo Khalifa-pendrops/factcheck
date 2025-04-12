@@ -5,4 +5,6 @@
 2025-04-11T23:18:29.336Z [[31merror[39m]: undefined FactCheck validation failed: results: Cast to string failed for value "[]" (type Array) at path "results"
 2025-04-12T05:23:06.938Z [[31merror[39m]: Could not connect to MongoDB... ⛔ Server selection timed out after 5000 ms
 2025-04-12T05:43:15.320Z [[31merror[39m]: Could not connect to MongoDB... Cannot read properties of undefined (reading 'connection')
+2025-04-12T10:52:47.962Z [[31merror[39m]: undefined Expected property name or '}' in JSON at position 1
+2025-04-12T10:55:04.783Z [[31merror[39m]: undefined Expected property name or '}' in JSON at position 2
 2025-04-12T10:22:01.482Z [[31merror[39m]: Fact-checking failed:

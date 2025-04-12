@@ -46,6 +46,16 @@ class FactCheckService {
   static async getRecentFactChecks() {
     return await FactCheck.find().sort({ createdAt: -1 }).limit(10);
   }
+
+  static async getFactCheckById(id) {
+    if (!id) return null;
+    try {
+      return await FactCheck.findById(id).exec();
+    } catch (error) {
+      winston.error(`Error retrieving fact check by ID ${id}:`, error);
+      throw error;
+    }
+  }
 }
 
 module.exports = FactCheckService;

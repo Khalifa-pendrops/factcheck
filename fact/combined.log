@@ -81,3 +81,16 @@
 2025-04-12T10:46:17.884Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T10:46:26.849Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
 2025-04-12T10:46:32.279Z [[32minfo[39m]: Connected to MongoDB...: ac-kklsusm-shard-00-00.skdq6hz.mongodb.net
+2025-04-12T10:32:34.955Z [[32minfo[39m]: Connected to MongoDB...: ac-wvg4zyf-shard-00-00.tbt3bsb.mongodb.net
+2025-04-12T10:33:54.139Z [[32minfo[39m]: Translation server running on port 3001
+2025-04-12T10:42:49.599Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:42:49 +0000] "GET /api/languages HTTP/1.1" 200 133 "-" "curl/8.11.1"
+2025-04-12T10:50:10.060Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:50:10 +0000] "POST /api/translate/text\ HTTP/1.1" 404 159 "-" "curl/8.11.1"
+2025-04-12T10:52:47.962Z [[31merror[39m]: undefined Expected property name or '}' in JSON at position 1
+2025-04-12T10:52:47.983Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:52:47 +0000] "POST /api/translate/text HTTP/1.1" 500 56 "-" "curl/8.11.1"
+2025-04-12T10:55:04.783Z [[31merror[39m]: undefined Expected property name or '}' in JSON at position 2
+2025-04-12T10:55:04.805Z [[32minfo[39m]: ::1 - - [12/Apr/2025:10:55:04 +0000] "POST /api/translate/text HTTP/1.1" 500 56 "-" "curl/8.11.1"
+2025-04-12T11:04:40.173Z [[32minfo[39m]: ::1 - - [12/Apr/2025:11:04:40 +0000] "POST /api/translate/text%0D%0A HTTP/1.1" 404 164 "-" "PostmanRuntime/7.43.3"
+2025-04-12T11:07:29.564Z [[32minfo[39m]: ::1 - - [12/Apr/2025:11:07:29 +0000] "POST /api/translate/text%0D%0A HTTP/1.1" 404 164 "-" "PostmanRuntime/7.43.3"
+2025-04-12T11:15:01.213Z [[32minfo[39m]: Connected to MongoDB...: ac-wvg4zyf-shard-00-02.tbt3bsb.mongodb.net
+2025-04-12T11:15:18.132Z [[32minfo[39m]: Translation server running on port 3001
+2025-04-12T11:42:13.563Z [[32minfo[39m]: ::1 - - [12/Apr/2025:11:42:13 +0000] "POST /api/translate/text%0D%0A HTTP/1.1" 404 164 "-" "PostmanRuntime/7.43.3"
