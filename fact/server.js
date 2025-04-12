@@ -17,7 +17,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan("combined", { stream: winston.stream }));
 app.use(express.json());
-app.use(express({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", require("./routes/api"));
 
