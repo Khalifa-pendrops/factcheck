@@ -21,4 +21,4 @@ router.get(
 );
 router.post("/translate/text", translationController.translateText);
 
-module.exports = router;
+module.exports = router; 
