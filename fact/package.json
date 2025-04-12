@@ -28,7 +28,7 @@
     "swagger-ui-express": "^5.0.0",
     "tesseract.js": "^4.1.1",
     "winston": "^3.11.0",
-    "winston-daily-rotate-file": "^4.7.1",
+    "winston-daily-rotate-file": "^4.7.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
