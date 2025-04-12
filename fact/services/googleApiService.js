@@ -1,6 +1,5 @@
 const axios = require("axios");
 const config = require("../config/config");
-const winston = require("../utils/logger");
 
 class GoogleApiService {
   static async searchClaims(query, language = "en") {
@@ -10,14 +9,31 @@ class GoogleApiService {
           query,
           languageCode: language,
           key: config.googleFactCheckApiKey,
+          pageSize: 5,
         },
+        timeout: 5000,
       });
-      return response.data;
+
+      return this._filterValidClaims(response.data);
     } catch (error) {
-      winston.error("Google Fact Check API error:", error);
-      throw error;
+      console.error("Google API Error:", error.response?.data || error.message);
+      return { claims: [] };
     }
   }
-}
 
-module.exports = GoogleApiService;
+  static _filterValidClaims(data) {
+    if (!data || !Array.isArray(data.claims)) return { claims: [] };
+
+    return {
+      claims: data.claims
+        .filter((claim) => {
+          return (
+            claim?.text &&
+            claim.claimReview?.[0]?.textualRating &&
+            claim.claimReview[0].url
+          );
+        })
+        .slice(0, 5), 
+    };
+  }
+}
